@@ -1,0 +1,18 @@
+<h1>Your Dashboard</h1>
+
+{{#each posts}}
+  <div class="post">
+    <h2><a href="/post/{{id}}">{{title}}</a></h2>
+    <p>{{content}}</p>
+    <button class="edit-post">Edit</button>
+    <button class="delete-post">Delete</button>
+  </div>
+{{else}}
+  <p>No posts yet. Create one below!</p>
+{{/each}}
+
+<form id="new-post-form">
+  <input type="text" placeholder="Title" name="title" required>
+  <textarea name="content" placeholder="Write your post here..." required></textarea>
+  <button type="submit">Create Post</button>
+</form>
